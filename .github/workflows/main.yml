@@ -12,11 +12,11 @@ jobs:
         # node_modules取得
       - name: Install Dependencies
         run: npm install
+      - name: Firebase tools install
+        run: npm install firebase-tools
         # ビルドファイル
       - name: Build
         run: npm run build
         # Firebaseのデプロイコマンド
-      - name: Firebase tools install
-        run: npm install -g firebase-tools
       - name: Deploy to Firebase
         run: firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
