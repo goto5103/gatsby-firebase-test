@@ -1,8 +1,11 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import PwaCompat from "./pwacompat"
 
 const Header = ({ siteTitle }) => (
+  <>
+  <PwaCompat />
   <header
     style={{
       background: `rebeccapurple`,
@@ -29,6 +32,7 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
   </header>
+  </>
 )
 
 Header.propTypes = {
