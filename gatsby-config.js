@@ -5,6 +5,23 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: "gatsby-theme-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyCm7rFdbAgVPF8JRrvCjIxnekqTUV4e8Dg",
+          authDomain: "test-login-473bc.firebaseapp.com",
+          databaseURL: "test-login-473bc-default-rtdb.firebaseio.com",
+          projectId: "test-login-473bc",
+          storageBucket: "test-login-473bc.appspot.com",
+          messagingSenderId: "1044827423638",
+          appId: "1:1044827423638:web:9c85d18d42f361fb7453b7",
+        },
+        loginPath: "/login",
+        loginRedirectPath: "/dashboard",
+        socialLogins: ["google"],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -19,18 +36,48 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Goto test`,
+        short_name: `Goto test`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#bbbbbb`,
+        theme_color: `#7b68ee`,
+        display: `standalone`,
+        icons: [
+          {
+            src: "icons/icon-48x48.png",
+            sizes: "48x48",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "icons/icon-144x144.png",
+            sizes: "144x144",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          }
+        ]
+        // icon:"./src/images/g139.png",
+        // icon_options: {
+        //   purpose: `maskable`,
+        // },
       },
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
   ],
 }

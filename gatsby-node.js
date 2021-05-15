@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage } = actions;
+    if (page.path.match(/^\/user/)) {
+      page.matchPath = "/user/*";
+      createPage(page);
+    }
+  };
