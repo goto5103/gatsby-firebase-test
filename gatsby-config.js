@@ -43,7 +43,7 @@ module.exports = {
         theme_color: `#7b68ee`,
         display: `standalone`,
         legacy: false, 
-        icon:"icons/icon-512x512.png",
+        icon:"static/icons/icon-512x512.png",
         icon_options: {
           purpose: `maskable`,
         },
