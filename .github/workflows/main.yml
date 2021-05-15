@@ -11,12 +11,10 @@ jobs:
         uses: actions/checkout@master
         # node_modules取得
       - name: Install Dependencies
-        run: npm install
-      - name: Firebase tools install
-        run: npm install firebase-tools
+        run: yarn install
         # ビルドファイル
       - name: Build
-        run: npm run build
+        run: yarn run build
         # Firebaseのデプロイコマンド
       - name: Deploy to Firebase
-        run: firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
+        run: yarn deploy --token=${{ secrets.FIREBASE_TOKEN }}
