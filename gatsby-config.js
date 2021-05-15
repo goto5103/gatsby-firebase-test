@@ -45,7 +45,7 @@ module.exports = {
         legacy: false, 
         icon:"static/icons/icon-512x512.png",
         icon_options: {
-          purpose: `maskable`,
+          purpose: `any maskable`,
         },
         // icons: [
         //   {
