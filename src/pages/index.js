@@ -21,6 +21,8 @@ const IndexPage = () => {
           }}
         />
       )}
+      <p>これはテストページです。</p>
+      
       {isLoggedIn && <button onClick={() => auth.signOut()}>ログアウト</button>}
     </Layout>
   )
