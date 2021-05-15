@@ -42,6 +42,7 @@ module.exports = {
         background_color: `#bbbbbb`,
         theme_color: `#7b68ee`,
         display: `standalone`,
+        legacy: false, 
         icons: [
           {
             src: "icons/icon-48x48.png",
