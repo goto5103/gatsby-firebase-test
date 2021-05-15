@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 const PwaCompat = () => {
   return (
     <Helmet>
-      <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+      <script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
     </Helmet>
   )
 }
