@@ -42,8 +42,8 @@ module.exports = {
         background_color: `#bbbbbb`,
         theme_color: `#7b68ee`,
         display: `standalone`,
-        legacy: false, 
-        icon:"static/icons/icon-512x512.png",
+        legacy: false,
+        icon: "static/icons/icon-512x512.png",
         icon_options: {
           purpose: `any maskable`,
         },
@@ -109,13 +109,29 @@ module.exports = {
         //     purpose: "any maskable",
         //   }
         // ]
-
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-
+    "gatsby-plugin-typescript",
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'https://example.com/graphql'
+      }
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "Apollo",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "test",
+        // Url to query from
+        url: "https://7m9ajov8ih.execute-api.ap-northeast-1.amazonaws.com/dev/graphql",
+      },
+    },
   ],
 }
